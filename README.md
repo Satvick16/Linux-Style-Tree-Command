@@ -7,4 +7,4 @@ tree_script.py: uses the built-in os module and recursion to display the file hi
 
 demo_dir: sample directory for testing the main script
 
-expected_tree_output.jpeg: the output provided by Linux bash fr the tree command used on demo_dir
+linux_tree_output.jpeg: the output provided by Linux bash fr the tree command used on demo_dir
