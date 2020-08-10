@@ -1,7 +1,7 @@
 # Linux-Style Tree Command
 
 On the command line, the 'tree' command displays a well-formatted hierarchy of all directories and files within the current working directory.
-My fascination for the speed and ingenuity of such features compelled me to replicate the source code for this command.
+This program was an attempt to recreate the logic behind this command in an effort to better understand its nuance.
 
 tree_script.py: uses the built-in os module and recursion to display the file hierarchy formatted with indents
 
