@@ -1,10 +1,18 @@
 # Linux-Style Tree Command
 
-On the command line, the 'tree' command displays a well-formatted hierarchy of all directories and files within the current working directory.
-This program was an attempt to recreate the logic behind this command in an effort to better understand its nuance.
+On the command line, the 'tree' command recursively displays a well-formatted hierarchy of all directories and files within the current working directory. This program was an attempt to recreate the logic behind this command in an effort to better understand its nuance.
 
-tree_script.py: uses the built-in os module and recursion to display the file hierarchy formatted with indents
+### Downloads
 
-demo_dir: sample directory for testing the main script
+* tree_script.py: uses the built-in os module and recursion to display the file hierarchy formatted with indents
+* demo_dir: sample directory for testing the main script
+* linux_tree_output.jpeg: the output provided by Linux bash fr the tree command used on demo_dir
 
-linux_tree_output.jpeg: the output provided by Linux bash fr the tree command used on demo_dir
+## Built With
+
+  - [Built-in os module] - used to navigate Windows file system
+
+## Acknowledgments
+
+  - Kalle Hallden (YouTube: Kalle Hallden)
+  
