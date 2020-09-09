@@ -1,4 +1,4 @@
-# Linux-Style Tree Command
+# File Tree Creator
 
 On the command line, the 'tree' command recursively displays a well-formatted hierarchy of all directories and files within the current working directory. This program was an attempt to recreate the logic behind this command in an effort to better understand its nuance.
 
