@@ -2,6 +2,10 @@
 
 On the command line, the 'tree' command recursively displays a well-formatted hierarchy of all directories and files within the current working directory. This program was an attempt to recreate the logic behind this command in an effort to better understand its nuance.
 
+## Sample Output
+
+![Sample output](https://github.com/satvick16/slope-field-generator/blob/master/linux_tree_output.jpg?raw=true)
+
 ### Downloads
 
 * tree_script.py: uses the built-in os module and recursion to display the file hierarchy formatted with indents
