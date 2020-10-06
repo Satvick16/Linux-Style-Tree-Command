@@ -40,7 +40,7 @@ def tree(path, original_depth):
 
 def main():
 	# Windows-style path of the directory in question
-	PATH = r' <<insert the location of this repository on your device>> \Random-Scripts\demo_dir'
+	PATH = r' <<insert the location of this repository on your device>> \demo_dir'
 	PATH_DEPTH = len(PATH.split('\\'))
 
 	print()
