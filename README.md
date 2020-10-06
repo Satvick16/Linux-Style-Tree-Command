@@ -4,7 +4,7 @@ On the command line, the 'tree' command recursively displays a well-formatted hi
 
 ## Sample Output
 
-![Sample output](https://github.com/satvick16/slope-field-generator/blob/master/linux_tree_output.jpg?raw=true)
+![Sample output](https://github.com/satvick16/file-tree-generator/blob/master/linux_tree_output.jpg?raw=true)
 
 ### Downloads
 
