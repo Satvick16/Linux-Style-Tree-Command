@@ -3,7 +3,8 @@ import os
 
 def tree(path):
 	"""
-
+	Open output text document with context manager and execute file tree generation within it.
+	:param path: full Windows-style path to directory of interest
 	"""
 	original_depth = len(path.split('\\'))
 
@@ -18,7 +19,10 @@ def tree(path):
 
 def traverse(path, original_depth, doc):
 	"""
-
+	List all contents of a directory and recursively traverse the subdirectories.
+	:param path: full Windows-style path to directory of interest
+	:param original_depth: the depth of the original directory for which this program was called
+	:param doc: the text document to be written to
 	"""
 	# list all directories within current path
 	contents = os.listdir(path)
@@ -48,7 +52,13 @@ def traverse(path, original_depth, doc):
 
 def append(path, original_depth, doc, root, name, item):
 	"""
-
+	Write directory or file name to text document with appropriate indentation.
+	:param path: full Windows-style path to directory of interest
+	:param original_depth: the depth of the original directory for which this program was called
+	:param doc: the text document to be written to
+	:param root: 
+	:param name: 
+	:param item: 
 	"""
 	x = os.path.abspath(os.path.join(root, name))
 	# determine how 'deep' item is within the file hierarchy w.r.t the original directory
@@ -59,9 +69,8 @@ def append(path, original_depth, doc, root, name, item):
 
 
 def main():
-	# Windows-style path of the directory in question
-	PATH = r'C:\Users\satvi\Desktop\Tech\file-tree-generator\demo_dir'
-	tree(PATH)
+	directory = r'C:\Users\satvi\Desktop\Tech\file-tree-generator\demo_dir'
+	tree(directory)
 
 
 if __name__ == '__main__':
