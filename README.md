@@ -8,9 +8,10 @@ On the command line, the 'tree' command recursively displays a well-formatted hi
 
 ### Downloads
 
-* tree_script.py: uses the built-in os module and recursion to display the file hierarchy formatted with indents
+* file_tree.py: (main program) uses the built-in os module and recursion to ouput the file tree formatted with indents to a text file
 * demo_dir: sample directory for testing the main script
-* linux_tree_output.jpeg: the output provided by Linux bash fr the tree command used on demo_dir
+* linux_tree_output.jpeg: the output provided by Linux bash for the tree command used on demo_dir
+* tree.txt: text file where file tree is written
 
 ## Built With
 
@@ -18,5 +19,4 @@ On the command line, the 'tree' command recursively displays a well-formatted hi
 
 ## Acknowledgments
 
-  - Kalle Hallden (YouTube: Kalle Hallden)
-  
+  - Kalle Hallden (an excellent tech YouTube channel)
