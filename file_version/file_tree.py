@@ -32,19 +32,17 @@ def traverse(path, original_depth, doc):
 		
 		# if item is a file (not a directory)
 		if '.' in item:
-			# locate full path of item			
+			# locate full path of item	
 			for root, dirs, files in os.walk(path):
 				for name in files:
-					if name == item:
-						append(path, original_depth, doc, root, name, item)
+					append(path, original_depth, doc, root, name, item)
 		
-		# if item is a directory
+		# if item is a directory (not a file)
 		else:
 			# locate full path of item
 			for root, dirs, files in os.walk(path):
 				for name in dirs:
-					if name == item:
-						append(path, original_depth, doc, root, name, item)
+					append(path, original_depth, doc, root, name, item)
 
 			# continue recursively searching the current directory
 			traverse(str(os.path.join(path, item)), original_depth, doc)
@@ -60,18 +58,10 @@ def append(path, original_depth, doc, root, name, item):
 	:param name: 
 	:param item: 
 	"""
-	x = os.path.abspath(os.path.join(root, name))
-	# determine how 'deep' item is within the file hierarchy w.r.t the original directory
-	curr_depth = len(path.split('\\')) - original_depth
-	
-	# format the file name based on its 'depth'
-	doc.write(('\t\t' * curr_depth) + item + "\n")
-
-
-def main():
-	directory = r'C:\Users\satvi\Desktop\Tech\file-tree-generator\demo_dir'
-	tree(directory)
-
-
-if __name__ == '__main__':
-	main()
+	if name == item:
+		x = os.path.abspath(os.path.join(root, name))
+		# determine how 'deep' item is within the file hierarchy w.r.t the original directory
+		curr_depth = len(path.split('\\')) - original_depth
+		
+		# format the file name based on its 'depth'
+		doc.write(('\t\t' * curr_depth) + item + "\n")
