@@ -5,6 +5,19 @@ from gui_tree import *
 
 
 root = tk.Tk()
+root.title("Directory Tree Generator")
+root.iconbitmap("tree_icon.ico")
+
+app_width = 600
+app_height = 650
+
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+x = (screen_width / 2) - (app_width / 2)
+y = (screen_height / 2) - (app_height / 2)
+
+root.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
 
 
 def get_folder_and_make_tree():
@@ -17,34 +30,26 @@ def get_folder_and_make_tree():
 def make_tree(path, original_depth):
 	contents = os.listdir(path)
 	
-	# iterate over list of contents
 	for item in contents:
 		
-		# if item is a file (not a directory)
 		if '.' in item:
-			# locate full path of item	
 			for root, dirs, files in os.walk(path):
 				for name in files:
 					display(path, original_depth, root, name, item)
 		
-		# if item is a directory (not a file)
 		else:
-			# locate full path of item
 			for root, dirs, files in os.walk(path):
 				for name in dirs:
 					display(path, original_depth, root, name, item)
 
-			# continue recursively searching the current directory
 			make_tree(str(os.path.join(path, item)), original_depth)
 
 
 def display(path, original_depth, root, name, item):
 	if name == item:
 		x = os.path.abspath(os.path.join(root, name))
-		# determine how 'deep' item is within the file hierarchy w.r.t the original directory
 		curr_depth = len(path.split('\\')) - original_depth
 		
-		# format the file name based on its 'depth'
 		tree.insert(tk.END, "\n" + ('\t' * curr_depth) + item)
 
 
