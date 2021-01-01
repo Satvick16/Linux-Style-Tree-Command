@@ -5,6 +5,7 @@ On the command line, the 'tree' command recursively displays a well-formatted hi
 ## Sample Output
 
 ![Sample output 1](https://github.com/satvick16/directory-tree-generators/blob/master/linux_tree_output.jpg?raw=true)
+![Sample output 2](https://github.com/satvick16/directory-tree-generators/blob/master/dirguisample.PNG?raw=true)
 
 ### Downloads
 
